@@ -183,11 +183,11 @@ osm
 
 - ポップアップコンテンツのテンプレート：
 
-``` uMap
+<p>
 # [[http://wikipedia.org/wiki/{wikipedia}|{name}]]
 Web: [[{website}]]
 {{{https://ja.m.wikipedia.org/wiki/{wikipedia}%20}}}
-```
+</p>
 
 --
 
