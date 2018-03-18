@@ -61,7 +61,10 @@
 
 ## 今日の成果イメージ<hr>
 
+
+<div>
 <iframe width="100%" height="500px" frameBorder="0" src="https://umap.openstreetmap.fr/ja/map/wacker-24_206109?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe><p><a href="https://umap.openstreetmap.fr/ja/map/wacker-24_206109">フルスクリーン表示</a></p>
+</div>
 
 ---
 
@@ -100,7 +103,7 @@
 - 日本赤十字社和歌山県赤十字血液センター 献血バスの日程の一覧
     http://www.wakayama.bc.jrc.or.jp/bus/license/
 
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520036625916_image.png)
+![画像](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520036625916_image.png)
 
 --
 
@@ -109,7 +112,8 @@
 - CSVファイルの内容をコピー
 - 緯度・経度の列を先頭に持ってきて、それぞれ「lat」「lon」に変更
 - 場所名称を「name」に変更
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520036739414_image.png)
+
+![画像](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520036739414_image.png)
 
 --
 
@@ -117,7 +121,8 @@
 
 - ファイル　→　ウェブに公開
 - URLをコピーする
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520037048654_image.png)
+
+![画像](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520037048654_image.png)
 
 --
 
@@ -128,7 +133,8 @@
 - インポートデータ形式を選択「csv」
 - インポート対象レイヤ選択：任意のレイヤー、もしくは「新規レイヤーをインポート」
 - インポートを実行
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520037149569_image.png)
+
+![画像](https://d2mxuefqeaa7sj.cloudfront.net/s_3BE39A5B709DA6336637CA659A7604DE0F1A9620B4D4F2721D74444605C0A69D_1520037149569_image.png)
 
 ---
 
@@ -144,11 +150,24 @@
 
 ### uMap:layer設定：サイト外のデータ<hr>
 
-設定内容
-- URL:https://overpass-api.de/api/interpreter?data=[out:json][timeout:2000];(node["railway"="station"]({south},{west},{north},{east});way["railway"="station"]({south},{west},{north},{east}););out body center qt;>;out skel qt;
+設定
+- URL:
 
-- フォーマット:osm
-- 表示開始するズームレベル：14
+``` uMap
+https://overpass-api.de/api/interpreter?data=[out:json][timeout:2000];(node["railway"="station"]({south},{west},{north},{east});way["railway"="station"]({south},{west},{north},{east}););out body center qt;>;out skel qt;
+```
+
+- フォーマット:
+
+``` uMap
+osm
+```
+
+- 表示開始するズームレベル：
+
+``` uMap
+14
+```
 
 --
 
@@ -161,9 +180,14 @@
 ## uMap:layer設定：ポップアップオプション<hr>
 
 設定内容
-- ポップアップコンテンツのテンプレート：# [[http://wikipedia.org/wiki/{wikipedia}|{name}]]
+
+- ポップアップコンテンツのテンプレート：
+
+``` uMap
+# [[http://wikipedia.org/wiki/{wikipedia}|{name}]]
 Web: [[{website}]]
 {{{https://ja.m.wikipedia.org/wiki/{wikipedia}%20}}}
+```
 
 --
 
